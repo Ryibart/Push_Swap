@@ -1,23 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   rotation.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 13:45:13 by rtammi            #+#    #+#             */
-/*   Updated: 2024/09/30 19:41:16 by rtammi           ###   ########.fr       */
+/*   Created: 2024/09/30 17:34:11 by rtammi            #+#    #+#             */
+/*   Updated: 2024/09/30 17:34:13 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	push_swap(t_vector *stack_a, t_vector *stack_b)
-{
-	(void)(stack_a);
-	(void)(stack_b);
-	//sort stacks
-	//print instructions
-	//execute instructions
-	//free memory
-}
