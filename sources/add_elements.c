@@ -6,7 +6,7 @@
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:37:52 by rtammi            #+#    #+#             */
-/*   Updated: 2024/09/30 19:45:39 by rtammi           ###   ########.fr       */
+/*   Updated: 2024/10/02 14:03:23 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ int split_string(t_vector *stack_a, char **argv)
 		vector_push(stack_a, &element);
 		i++;
 	}
+	i--;
+	while (i >= 0)
+		free(tmp[i--]);
 	free(tmp);
 	return (1);
 }
@@ -50,9 +53,14 @@ int	add_elements(t_vector *stack_a, int argc, char **argv)
 		while (i < argc)
 		{
 			num = ft_strtol(argv[i], NULL, 10, &valid);
+			printf("num is %ld\n", num);
 			if (!valid)
 				return (PS_ERROR);
 			vector_push(stack_a, &num);
+			for (size_t j = 0; j < stack_a->len; j++)
+  			{
+    			printf("Element %ld: %ld\n", j, *((long *)vector_get(stack_a, j)));
+			}
 			i++;
 		}
 	}

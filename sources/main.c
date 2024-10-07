@@ -6,11 +6,17 @@
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 18:57:59 by rtammi            #+#    #+#             */
-/*   Updated: 2024/09/30 19:46:04 by rtammi           ###   ########.fr       */
+/*   Updated: 2024/10/02 14:14:29 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	print_long(void *elem)
+{
+	printf("%ld ", *(long *)elem);
+	printf("\n");
+}
 
 int	main(int argc, char **argv)
 {
@@ -22,8 +28,8 @@ int	main(int argc, char **argv)
 	verify_args(argc, argv);
 
 	// Initialize stacks
-	ret = vector_new(&stack_a, 1, sizeof(int));
-	ret = vector_new(&stack_b, 1, sizeof(int));
+	ret = vector_new(&stack_a, 1, sizeof(long));
+	ret = vector_new(&stack_b, 1, sizeof(long));
 	if (ret == VECTOR_ERROR)
 		error_handler();
 	
@@ -34,6 +40,7 @@ int	main(int argc, char **argv)
 	
 	// Sort the stack
 	push_swap(&stack_a, &stack_b);
+	vector_iter(&stack_a, print_long);
 	//free memory
 	vector_free(&stack_a);
 	vector_free(&stack_b);
