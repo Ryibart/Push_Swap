@@ -6,7 +6,7 @@
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:34:11 by rtammi            #+#    #+#             */
-/*   Updated: 2024/10/08 16:12:51 by rtammi           ###   ########.fr       */
+/*   Updated: 2024/10/08 20:02:19 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,17 @@ void	ra(t_vector *stack_a, bool flag)
 
 void	rb(t_vector *stack_b, bool flag)
 {
-	int	*top;
+	int	top;
 
 	top = 0;
 	if (stack_b->len < 2)
 		return ;
-	top = (int *)vector_get(stack_b, stack_b->len - 1);
+	vector_pop_first(&top, stack_b);
+	printf("Rotating: Popped %d from stack_b\n", top);
 	vector_push_last(stack_b, &top);
+	printf("Rotating: Pushed %d back to stack_b\n", top);
 	if (flag == true)
-		ft_printf("rb\n");
+		ft_printf("ra\n");
 }
 
 void	rr(t_vector *stack_a, t_vector *stack_b)

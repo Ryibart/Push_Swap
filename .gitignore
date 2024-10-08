@@ -1,0 +1,45 @@
+# Ignore the executable
+push_swap
+
+# Ignore object files, shared libraries, and executables
+*.o
+*.so
+*.exe
+
+# Ignore dependency files
+*.d
+
+# Ignore compiled dynamic libraries
+*.dll
+*.dylib
+
+# Ignore compiled static libraries
+*.a
+*.lib
+
+# Ignore debug files
+*.gch
+*.pch
+
+# Ignore generated files
+*.out
+*.log
+
+# Ignore all files that start with 'test'
+test*
+
+# Ignore build directories
+/build/
+/bin/
+/obj/
+/lib/
+/dist/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.user
+*.workspace
+*.project

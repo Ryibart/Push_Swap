@@ -6,7 +6,7 @@
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:29:44 by rtammi            #+#    #+#             */
-/*   Updated: 2024/10/08 16:11:51 by rtammi           ###   ########.fr       */
+/*   Updated: 2024/10/08 20:04:34 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ void	error_handler(void);
 int		verify_args(int argc, char **argv);
 int		add_elements(t_vector *stack_a, int argc, char **argv);
 
+void	simple_sort(t_vector *stack);
+void	recursive_sort(t_vector *stack_a, t_vector *stack_b, size_t size);
+
 void	pa(t_vector *stack_a, t_vector *stack_b);
 void	pb(t_vector *stack_a, t_vector *stack_b);
 void	sa(t_vector *stack_a, bool flag);
@@ -39,6 +42,8 @@ void	ra(t_vector *stack_a, bool flag);
 void	rb(t_vector *stack_b, bool flag);
 void	rr(t_vector *stack_a, t_vector *stack_b);
 void	rra(t_vector *stack_a, bool flag);
+void	rrb(t_vector *stack_b, bool flag);
+void	rrr(t_vector *stack_a, t_vector *stack_b);
 
 void	print_stack(t_vector *stack, char stack_name);
 
