@@ -6,7 +6,7 @@
 #    By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/18 13:24:58 by rtammi            #+#    #+#              #
-#    Updated: 2024/09/30 20:18:14 by rtammi           ###   ########.fr        #
+#    Updated: 2024/10/08 16:13:18 by rtammi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,9 +39,11 @@ SOURCES	 := 	push_swap.c \
 
 RULES	 := 	push.c \
 				rotate.c \
-				swap.c
+				swap.c		\
+				reverse_rotate.c
 
-UTILS	 := 	error_handler.c
+UTILS	 := 	error_handler.c \
+				debug.c
 				
 
 SRCS        := $(addprefix sources/, $(SOURCES)) \

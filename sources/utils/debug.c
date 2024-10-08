@@ -1,42 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   verify_args.c                                      :+:      :+:    :+:   */
+/*   debug.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/28 19:21:14 by rtammi            #+#    #+#             */
-/*   Updated: 2024/10/07 16:19:31 by rtammi           ###   ########.fr       */
+/*   Created: 2024/10/07 17:36:23 by rtammi            #+#    #+#             */
+/*   Updated: 2024/10/08 14:29:28 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	verify_args(int argc, char **argv)
+void	print_stack(t_vector *stack, char stack_name)
 {
-	int	i;
-	int	j;
-
-	i = 1;
-	if (argc < 2)
-		error_handler();
-	while (i < argc)
+	printf("Stack %c: ", stack_name);
+	for (size_t i = 0; i < stack->len; i++)
 	{
-		j = 0;
-		if (argv[i][j] == '-')
-			j++;
-		while (argv[i][j])
-		{
-			if (!ft_isdigit(argv[i][j]))
-			{
-				if (argc == 2 && (ft_isspace(argv[i][j]) || argv[i][j] == '-' || argv[i][j] == '+')) //FIXTHIS: Correct the parsing logic
-					j++;
-				else
-					error_handler();
-			}
-			j++;
-		}
-		i++;
+		int *elem = (int *)vector_get(stack, i);
+		printf("%d ", *elem);
 	}
-	return (1);
+	printf("\n");
 }
