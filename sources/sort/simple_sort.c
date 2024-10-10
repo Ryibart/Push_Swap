@@ -6,7 +6,7 @@
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 19:28:42 by rtammi            #+#    #+#             */
-/*   Updated: 2024/10/08 19:56:38 by rtammi           ###   ########.fr       */
+/*   Updated: 2024/10/10 14:02:37 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	sort_two(t_vector *stack)
 	if (*(int *)vector_get(stack, 0) > *(int *)vector_get(stack, 1))
 	{
 		sa(stack, true);
-		print_stack(stack, 'a');
 		return ;
 	}
 }

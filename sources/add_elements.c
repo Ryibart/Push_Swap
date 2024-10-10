@@ -6,7 +6,7 @@
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:37:52 by rtammi            #+#    #+#             */
-/*   Updated: 2024/10/08 16:12:16 by rtammi           ###   ########.fr       */
+/*   Updated: 2024/10/10 12:19:49 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@ int	split_string(t_vector *stack_a, char **argv)
 
 	i = 0;
 	tmp = ft_split(argv[1], 32);
-	while (tmp[i])
-	{
-		printf("tmp[%d] is : %s\n", i, tmp[i]); // DEBUG
-		i++;
-	}
+	// while (tmp[i])
+	// {
+	// 	printf("tmp[%d] is : %s\n", i, tmp[i]); // DEBUG
+	// 	i++;
+	// }
 	i = 0;
 	while (tmp[i])
 	{
 		element = ft_strtol(tmp[i], NULL, 10, &valid);
-		printf("Element %d is %ld\n", i, element); // DEBUG
+		// printf("Element %d is %ld\n", i, element); // DEBUG
 		if (!valid || element < INT_MIN || element > INT_MAX)
 		{
 			free(tmp);
@@ -63,14 +63,14 @@ int	add_elements(t_vector *stack_a, int argc, char **argv)
 		while (i < argc)
 		{
 			num = ft_strtol(argv[i], NULL, 10, &valid);
-			printf("num is %ld\n", num);
+			// printf("num is %ld\n", num);
 			if (!valid || num < INT_MIN || num > INT_MAX)
 				return (PS_ERROR);
 			vector_push_last(stack_a, &num);
-			for (size_t j = 0; j < stack_a->len; j++) //DEBUG
-  			{
-    			printf("Element %ld: %d\n", j, *((int *)vector_get(stack_a, j)));
-			}
+			// for (size_t j = 0; j < stack_a->len; j++) //DEBUG
+  			// {
+    		// 	printf("Element %ld: %d\n", j, *((int *)vector_get(stack_a, j)));
+			// }
 			i++;
 		}
 	}

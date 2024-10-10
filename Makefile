@@ -6,7 +6,7 @@
 #    By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/18 13:24:58 by rtammi            #+#    #+#              #
-#    Updated: 2024/10/08 21:26:24 by rtammi           ###   ########.fr        #
+#    Updated: 2024/10/10 12:21:41 by rtammi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,10 +40,15 @@ SRC_DIRS_OBJ := $(addprefix $(OBJ_DEP_DIR)/, $(SRC_DIRS))
 SOURCES		:= 	push_swap.c \
 				add_elements.c \
 				main.c \
+				check_dup.c \
 				verify_args.c
 
-SORT		:=	recursive_sort.c \
-				simple_sort.c
+SORT		:=	large_sort.c \
+				simple_sort.c \
+				best_move.c \
+				cost.c \
+				move.c \
+				sort_helper.c
 
 RULES		:= 	push.c \
 				rotate.c \

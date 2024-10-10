@@ -6,7 +6,7 @@
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 19:21:14 by rtammi            #+#    #+#             */
-/*   Updated: 2024/10/07 16:19:31 by rtammi           ###   ########.fr       */
+/*   Updated: 2024/10/09 14:10:39 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	verify_args(int argc, char **argv)
 
 	i = 1;
 	if (argc < 2)
-		error_handler();
+		return (PS_ERROR);
 	while (i < argc)
 	{
 		j = 0;
@@ -32,7 +32,7 @@ int	verify_args(int argc, char **argv)
 				if (argc == 2 && (ft_isspace(argv[i][j]) || argv[i][j] == '-' || argv[i][j] == '+')) //FIXTHIS: Correct the parsing logic
 					j++;
 				else
-					error_handler();
+					return (PS_ERROR);
 			}
 			j++;
 		}
